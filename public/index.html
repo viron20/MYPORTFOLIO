@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/423b54bc05.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/th-removebg-preview.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student Athlete</p>
+                <h1>Hi, I'm <span>Viron</span> <br>from Masbate</h1>
+            </div>
+        </div>
+    </div>
+    <!---------about---------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/likod ko sa main.jpg"
+                    height="400" >
+                </div>
+                <div class="about-col-2"><h1 class="sub-title">About me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dignissimos cupiditate, dolores quia magni explicabo necessitatibus voluptatum velit, fugiat odit, doloremque sunt ad itaque vero molestias nulla impedit tenetur fuga!</p>
+            
+                <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                
+                <div class="tab-content active-tab" id="skills">
+                    <ul>
+                        <li><span>C++</span><br>Beginner</li>
+                        <li><span>JAVA</span><br>Beginner</li>
+                        <li><span>HTML/CSS</span><br>Progressing</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="experience">
+                    <ul>
+                        <li><span>2025 - Current</span><br>Student Athelete</li>
+                        <li><span>2024</span><br>BU week champion</li>
+                        <li><span>2023</span><br> President Lister First sem</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="education">
+                    <ul>
+                        <li><span>2022</span><br> Graduated from Senior High School</li>
+                        <li><span>2021</span><br>Completion of Junior High Scjool </li>
+                        <li><span>2017</span><br>Graduated from Primary School</li>
+                    </ul>
+                </div>
+              </div>
+        </div>
+    </div>
+    </div>
+    <!-- -------------sevices----------- --->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-codepen"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non velit ducimus placeat, voluptatum illum quasi. Dolorem expedita consectetur, molestias praesentium sapiente fuga perspiciatis beatae quaerat ipsam exercitationem? Officia, molestiae.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>Game Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non velit ducimus placeat, voluptatum illum quasi. Dolorem expedita consectetur, molestias praesentium sapiente fuga perspiciatis beatae quaerat ipsam exercitationem? Officia, molestiae.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>Cyberhacking</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non velit ducimus placeat, voluptatum illum quasi. Dolorem expedita consectetur, molestias praesentium sapiente fuga perspiciatis beatae quaerat ipsam exercitationem? Officia, molestiae.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--------------portfolia---------------->
+<div id="portfolio">
+<div class="cotaniner">
+<h1 class="sub-title">My work</h1>
+<div class="work-list">
+    <div class="work">
+            <img src="images/cybersecurity.jpg" >
+            <div class="layer">
+                <h3>Social Media App</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, impedit corrupti sit numquam sint vel officia commodi temporibus natus eos molestias officiis distinctio nulla laudantium veritatis nam obcaecati. Excepturi, atque.</p>
+                 <a href="#"></a>
+            </div>
+        
+    </div>
+
+    <div class="work">
+            <img src="images/networking.webp" >
+        
+    </div>
+
+    <div class="work">
+            <img src="images/ethical hacking.jpg" >
+        
+    </div>
+</div>
+</div>
+
+
+</div>
+
+    <script>
+
+        var tablinks= document.getElementsByClassName("tab-links")
+        var tabcontents= document.getElementsByClassName("tab-content")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+             event.currentTarget.classList.add("active-link");
+             document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+
+</body>
+</html>
